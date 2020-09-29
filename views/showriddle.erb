@@ -4,12 +4,15 @@
 
 <p>We chose it for you:<%= @displayedriddle %></p>
 <form action="/riddles"<%= @user_answer %>" method="post">
+
 <div class="form-group">
   <label for="">Your Answer</label>
   <input type="text"
-    class="form-control" name="useranswer" id="" aria-describedby="helpId" placeholder="">
+    class="form-control" name="user_answer" id="user_answer" aria-describedby="helpId" placeholder="">
+    <input name="_method" type="hidden" value="post">
   <small id="helpId" class="form-text text-muted">Put your riddle answer here</small>
   <br>
 <button type="submit" class="btn">Go!</button>
 </div>
 </form>
+
