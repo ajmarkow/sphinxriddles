@@ -3,13 +3,13 @@
 <p>This is your riddle</p>
 
 <p>We chose it for you:<%= @displayedriddle %></p>
-<form action="/riddles/"<%= @user_answer %>" method="post">
+<form action="/riddles"<%= @user_answer %>" method="post">
 <div class="form-group">
   <label for="">Your Answer</label>
   <input type="text"
     class="form-control" name="useranswer" id="" aria-describedby="helpId" placeholder="">
   <small id="helpId" class="form-text text-muted">Put your riddle answer here</small>
   <br>
-  <input name="user_answer" id="" class="btn btn-primary" type="button" value="submit">
+<button type="submit" class="btn">Go!</button>
 </div>
 </form>

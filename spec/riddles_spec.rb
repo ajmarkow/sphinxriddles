@@ -21,3 +21,10 @@ describe ("get_random") do
     expect(testriddle.get_random()).to(eq(0).or eq(1).or eq(2).or eq(3))
   end
 end
+
+describe ('checkanswer') do 
+   it('compares answer') do 
+    expect(testriddle.checkanswer(3, "An echo")).to(eq(correct)) 
+     end 
+      end 
+      
