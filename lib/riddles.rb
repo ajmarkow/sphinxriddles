@@ -15,16 +15,28 @@ class Riddles
     return theriddlehash = riddlenumber
   end
 
-  def get_riddle(random_number)
+  def get_riddle(random_number,riddleoranswer)
+    riddleoranswer.to_str
+    if riddleoranswer == "riddle"
     theriddlehash = Hash.new
     theriddlehash.store(0, "What goes up but never comes down?")
     theriddlehash.store(1, "I shave every day, but my beard stays the same. What am I?")
     theriddlehash.store(2, "What can you break, even if you never pick it up or touch it?")
     theriddlehash.store(3,"What can’t talk but will reply when spoken to?")
-    return theriddlehash.fetch(random_number)
+     return theriddlehash.fetch(random_number)
+    elsif riddleoranswer == "answer"
+    theanswerhash = Hash.new
+    theanswerhash.store(0, "Your Age")
+    theanswerhash.store(1, "A barber")
+    theanswerhash.store(2, "A promise")
+    theanswerhash.store(3, "An echo")
+    return theanswerhash.fetch(random_number)
+    end
+   
   end
 
-  def pick_riddle
+  def pick_answer
     @user_answer = riddle_storage.fetch(random_number)
   end
 end
+
