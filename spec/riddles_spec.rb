@@ -4,14 +4,14 @@ require("riddles")
 describe ("get_riddle") do
   it("retrieves a riddle") do
     testriddle = Riddles.new()
-    expect(testriddle.get_riddle(0,'riddle')).to(eq("What goes up but never comes down?"))
-    expect(testriddle.get_riddle(1,'riddle')).to(eq("I shave every day, but my beard stays the same. What am I?"))
-    expect(testriddle.get_riddle(2,'riddle')).to(eq("What can you break, even if you never pick it up or touch it?"))
-    expect(testriddle.get_riddle(3,'riddle')).to(eq("What can’t talk but will reply when spoken to?"))
-    expect(testriddle.get_riddle(0,'answer')).to(eq("Your Age"))
-    expect(testriddle.get_riddle(1,'answer')).to(eq("A barber"))
-    expect(testriddle.get_riddle(2,'answer')).to(eq("A promise"))
-    expect(testriddle.get_riddle(3,'answer')).to(eq("An echo"))
+    expect(testriddle.get_riddle(0, "riddle")).to(eq("What goes up but never comes down?"))
+    expect(testriddle.get_riddle(1, "riddle")).to(eq("I shave every day, but my beard stays the same. What am I?"))
+    expect(testriddle.get_riddle(2, "riddle")).to(eq("What can you break, even if you never pick it up or touch it?"))
+    expect(testriddle.get_riddle(3, "riddle")).to(eq("What can’t talk but will reply when spoken to?"))
+    expect(testriddle.get_riddle(0, "answer")).to(eq("Your Age"))
+    expect(testriddle.get_riddle(1, "answer")).to(eq("A barber"))
+    expect(testriddle.get_riddle(2, "answer")).to(eq("A promise"))
+    expect(testriddle.get_riddle(3, "answer")).to(eq("An echo"))
   end
 end
 
@@ -22,9 +22,10 @@ describe ("get_random") do
   end
 end
 
-describe ('checkanswer') do 
-   it('compares answer') do 
-    expect(testriddle.checkanswer(3, "An echo")).to(eq(correct)) 
-     end 
-      end 
-      
+describe ("checkanswer") do
+  testriddle = Riddles.new()
+  testriddle.user_answer = "A barber"
+  it("compares answer") do
+    expect(testriddle.check_answer(1, "A barber")).to(eq(true))
+  end
+end
